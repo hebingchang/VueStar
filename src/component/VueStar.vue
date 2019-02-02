@@ -27,9 +27,9 @@ export default {
   },
   data () {
     return {
-      active: this.status,
-      toggleAnimate: this.status,
-      toggleColor: this.status
+      active: false,
+      toggleAnimate: false,
+      toggleColor: false
     }
   },
   computed: {
@@ -41,7 +41,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.active, this.toggleAnimate, this.toggleColor)
+    if (this.status) this.toggle()
     if (this.color) {
       if (isColors(this.color)) {
         return
