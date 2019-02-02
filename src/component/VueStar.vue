@@ -41,8 +41,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.status)
-    if (this.status) this.toggle()
     if (this.color) {
       if (isColors(this.color)) {
         return
@@ -51,6 +49,13 @@ export default {
       }
     } else {
       return
+    }
+  },
+  watch: {
+    status (val) {
+      this.active = val;
+      this.toggleAnimate = val;
+      this.toggleColor = val;
     }
   }
 }
