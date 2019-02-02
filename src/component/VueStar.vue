@@ -15,7 +15,8 @@ export default {
   name: 'VueStar',
   props: {
     animate: String,
-    color: String
+    color: String,
+    status: Boolean
   },
   methods: {
     toggle () {
@@ -26,9 +27,9 @@ export default {
   },
   data () {
     return {
-      active: false,
-      toggleAnimate: false,
-      toggleColor: false
+      active: this.status,
+      toggleAnimate: this.status,
+      toggleColor: this.status
     }
   },
   computed: {
