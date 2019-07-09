@@ -53,9 +53,9 @@ export default {
   },
   watch: {
     status (val) {
-      if (val !== this.active) {
-        this.toggle()
-      }
+      this.active = val
+      this.toggleAnimate = val
+      this.toggleColor = val
     }
   }
 }
