@@ -53,7 +53,7 @@ export default {
   },
   watch: {
     status (val) {
-      this.active = val
+      this.active = !val
       this.toggleAnimate = val
       this.toggleColor = val
       console.log(this.active, this.toggleAnimate, this.toggleColor)
