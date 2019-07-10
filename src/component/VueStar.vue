@@ -23,6 +23,7 @@ export default {
       this.active = !this.active
       this.toggleAnimate = !this.toggleAnimate
       this.toggleColor = !this.toggleColor
+      console.log(this.active, this.toggleAnimate, this.toggleColor)
     }
   },
   data () {
