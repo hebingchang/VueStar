@@ -23,7 +23,6 @@ export default {
       this.active = !this.active
       this.toggleAnimate = !this.toggleAnimate
       this.toggleColor = !this.toggleColor
-      console.log(this.active, this.toggleAnimate, this.toggleColor)
     }
   },
   data () {
@@ -54,7 +53,10 @@ export default {
   },
   watch: {
     status (val) {
-      this.toggle()
+      this.active = val
+      this.toggleAnimate = val
+      this.toggleColor = val
+      console.log(this.active, this.toggleAnimate, this.toggleColor)
     }
   }
 }
