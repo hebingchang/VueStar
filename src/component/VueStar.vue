@@ -55,7 +55,7 @@ export default {
     status (val) {
       this.active = !val
       this.toggleAnimate = val
-      this.toggleColor = !val
+      this.toggleColor = val
     }
   }
 }
